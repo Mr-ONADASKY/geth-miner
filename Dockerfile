@@ -1,8 +1,8 @@
 FROM ubuntu:xenial
 
-MAINTAINER Nick Vanden Eynde ninjawulf98@gmail.com
+LABEL Nick Vanden Eynde ninjawulf98@gmail.com
 
-VOLUME ["/miner"]
+VOLUME ["/miner", "/genesis"]
 RUN apt-get update \
   && apt-get install -y wget \
   && rm -rf /var/lib/apt/lists/*
