@@ -11,13 +11,7 @@ if test -f "/genesis/genesis.json"; then
   cp /genesis/genesis.json ./genesis.json
 fi
 
-echo "executing ls"
-ls
-echo "executing pwd"
-pwd
-
 chmod +x ./geth
 ./geth init genesis.json --datadir "/data"
-echo "test"
-./geth account import --password ~/.accountpassword  ~/.privatekey --datadir "/data"
+./geth account import --password ~/.accountpassword --datadir "/data" ~/.privatekey
 exec ./geth --datadir "/data" --bootnodes "enode://$bootnodeId@$bootnodeIp:30301" --networkid="6969" --verbosity=4 --gasprice '0' --rpc --rpcaddr "0.0.0.0" --rpccorsdomain "*" --mine --etherbase $address --unlock $address --password ~/.accountpassword
