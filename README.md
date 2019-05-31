@@ -10,3 +10,4 @@ bootnodeIp    bootnode ip
 gethBaseUrl   base url for the geth packages
 binary        geth package name
 `
+
