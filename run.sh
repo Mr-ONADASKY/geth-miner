@@ -17,6 +17,7 @@ echo "executing pwd"
 pwd
 
 chmod +x ./geth
-exec ./geth init genesis.json
-exec ./geth account import --password ~/.accountpassword  ~/.privatekey
+./geth init genesis.json
+echo "test"
+./geth account import --password ~/.accountpassword  ~/.privatekey
 exec ./geth --bootnodes "enode://$bootnodeId@$bootnodeIp:30301" --networkid="6969" --verbosity=4 --gasprice '0' --rpc --rpcaddr "0.0.0.0" --rpccorsdomain "*" --mine --etherbase $address --unlock $address --password ~/.accountpassword
