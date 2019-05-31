@@ -1,9 +1,8 @@
 #!/bin/bash
 
-BINARY=geth-alltools-linux-amd64-1.8.27-4bcc0a37.tar.gz
-wget "https://gethstore.blob.core.windows.net/builds/$BINARY"
-tar -xzvf $BINARY --strip 1
-rm $BINARY
+wget "$gethBaseUrl/$binary"
+tar -xzvf $binary --strip 1
+rm $binary
 
 echo $password > ~/.accountpassword
 echo $privatekey > ~/.privatekey
