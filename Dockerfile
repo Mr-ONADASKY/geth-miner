@@ -7,11 +7,11 @@ VOLUME ["/data", "/genesis"]
 ENV binary=geth-alltools-linux-amd64-1.8.27-4bcc0a37.tar.gz \
   gethBaseUrl=https://gethstore.blob.core.windows.net/builds \
   bootnodeport=30301 \
-  syncmode=full \
-  networkid=6969 \
-  gasprice=0 \
-  gcmode=archive \
-  rpcapi=admin,clique,db,eth,debug,miner,net,shh,txpool,personal,web3
+  syncmode="full" \
+  networkid="6969" \
+  gasprice="0" \
+  gcmode="archive" \
+  rpcapi="admin,clique,db,eth,debug,miner,net,shh,txpool,personal,web3"
 
 RUN apt-get update \
   && apt-get install -y wget \
