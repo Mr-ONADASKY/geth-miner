@@ -11,7 +11,8 @@ ENV binary=geth-alltools-linux-amd64-1.8.27-4bcc0a37.tar.gz \
   networkid="6969" \
   gasprice="0" \
   gcmode="archive" \
-  rpcapi="admin,clique,db,eth,debug,miner,net,shh,txpool,personal,web3"
+  rpcapi="web3" \
+  rpcvhosts="localhost"
 
 RUN apt-get update \
   && apt-get install -y wget \
