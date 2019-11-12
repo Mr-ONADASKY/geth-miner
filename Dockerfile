@@ -22,8 +22,6 @@ WORKDIR "/miner"
 COPY *.sh /usr/bin/
 RUN chmod +x /usr/bin/run.sh
 
-ADD ./genesis.json ./genesis.json
-
 CMD ["/usr/bin/run.sh"]
 
 EXPOSE 8545
