@@ -10,4 +10,4 @@ fi
 
 chmod +x ./geth
 ./geth init genesis.json --datadir "/data"
-exec ./geth --datadir "/data" --bootnodes "enode://$bootnodeId@$bootnodeIp:$bootnodeport" --networkid=$networkid --verbosity=4 --gasprice $gasprice --rpc --rpcaddr "0.0.0.0" --rpccorsdomain "*" --rpcapi=$rpcapi --syncmode $syncmode --gcmode $gcmode --rpcvhosts $rpcvhosts
+exec ./geth --datadir "/data" --bootnodes "enode://$bootnodeId@$bootnodeIp:$bootnodeport" --networkid=$networkid --verbosity=4 --gasprice $gasprice --rpc --rpcaddr "0.0.0.0" --rpccorsdomain "*" --rpcapi=$rpcapi --syncmode $syncmode --gcmode $gcmode --rpcvhosts=*
