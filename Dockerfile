@@ -4,7 +4,7 @@ LABEL Nick Vanden Eynde ninjawulf98@gmail.com
 
 VOLUME ["/data", "/genesis"]
 
-ENV binary=geth-alltools-windows-amd64-1.9.7-a718daa6.zip  \
+ENV binary=geth-alltools-linux-amd64-1.9.7-a718daa6.tar.gz \
   gethBaseUrl=https://gethstore.blob.core.windows.net/builds \
   bootnodeport=30301 \
   syncmode="full" \
